@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Links{% endblock %}
+
+{% block body %}
+    <aside class="menu">
+        <p class="menu-label">
+            Folders
+        </p>
+        <ul class="menu-list">
+            {% for resource in resources %}
+
+                <li><a href="{{ path('resource',{resource: resource.filename} ) }}"> {{ resource.filename }}</a></li>
+
+            {% endfor %} </ul>
+        <p class="menu-label">
+            Add Folder
+        </p>
+        <div class="menu-label">
+            <form method="POST" action="{{ path('resources_new') }}">
+                <div class="field has-addons">
+                    <div class="control is-expanded">
+
+                        <input type="text" class="input" name="resource" value=""/>
+                    </div>
+                    <div class="control">
+                        <button type="submit" class="button">New</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </aside>
+
+
+
+{% endblock %}
