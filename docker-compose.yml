@@ -85,6 +85,8 @@ services:
       - GF_PATHS_CONFIG=/etc/grafana/custom.ini
     volumes:
       - ./grafana/custom.ini:/etc/grafana/custom.ini
+      - ./grafana/dashboard.yaml:/etc/grafana/provisioning/dashboards/main.yaml
+      - ./grafana/dashboards:/var/lib/grafana/dashboards
     depends_on:
       - prometheus
       - traefik
