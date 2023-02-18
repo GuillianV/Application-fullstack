@@ -1,4 +1,2 @@
-default.conf
 docker-compose.yaml
 Dockerfile
-supervisord.conf
