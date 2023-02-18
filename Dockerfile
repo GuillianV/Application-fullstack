@@ -2,13 +2,7 @@ FROM composer:lts as builder
 
 WORKDIR /app
 
-# Update aptitude with new repo
-RUN apk update
-
-# Install software
-RUN apk add git
-
-RUN git clone https://github.com/decima/Linker.git .
+COPY . .
 
 RUN composer install
 
