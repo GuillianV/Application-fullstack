@@ -5,17 +5,17 @@ This tool is designed to store URLs and make previews of them.
 ## Development environment
 
 ### Requirements
-- PHP 8.2
+- Docker Engine
 
 ### Run
 You can test the app by running it with the following command : 
 ```
-php -S 0.0.0.0:8000 -t public
+docker compose up
 ```
 
 ## Configuration
-You can check the different configuration available in the .env file.
-
+You can check the different configuration available in the docker-compose.yml
+! Change hostanme in the docker-compose.yml
 ## Screenshot
 
 ![](docs/screenshot.png)
@@ -23,3 +23,4 @@ You can check the different configuration available in the .env file.
 ## Disclaimer
 
 This project is intented for educational purpose, feel free to fork it if you wanna use it!
+generated from decima/Linker
